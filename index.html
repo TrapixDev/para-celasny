@@ -270,13 +270,12 @@
 
   const counterEl = document.getElementById('counter');
   let count = 0;
-  setInterval(() => {
-    count = count + 1 + Math.floor(Math.random() * 4);
-    counterEl.textContent = count;
-  }, 350);
 
   const btn = document.getElementById('btnLove');
   btn.addEventListener('click', () => {
+    count += 1 + Math.floor(Math.random() * 4);
+    counterEl.textContent = count;
+
     for (let i = 0; i < 22; i++) {
       const heart = document.createElement('div');
       heart.className = 'burst';
